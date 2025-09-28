@@ -1,12 +1,12 @@
 import {defineCliConfig} from 'sanity/cli'
 
 export default defineCliConfig({
-  server:{
+  server: {
     port: 3334,
   },
   api: {
     projectId: '2vqru5yd',
-    dataset: 'production'
+    dataset: 'production',
   },
   deployment: {
     /**
@@ -14,5 +14,6 @@ export default defineCliConfig({
      * Learn more at https://www.sanity.io/docs/cli#auto-updates
      */
     autoUpdates: true,
-  }
+    appId: 'irrcuvjueocqx73jq4jejsiu',
+  },
 })
