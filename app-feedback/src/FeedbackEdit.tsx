@@ -6,6 +6,7 @@ import { Sentiment } from "./Sentiment";
 import { Notes } from "./Notes";
 import { Actions } from "./Actions";
 import { Assignee } from "./Assignee";
+import { OpenInStudio } from "./OpenInStudio";
 
 type FeedbackEditProps = {
   selectedFeedback: DocumentHandle;
@@ -53,13 +54,18 @@ export function FeedbackEdit({ selectedFeedback }: FeedbackEditProps) {
             </Stack>
 
             {/* In the next lessons... */}
-            <Sentiment value={sentiment} handle={selectedFeedback} />
+            <Sentiment
+              value={sentiment}
+              handle={selectedFeedback}
+              feedback={content}
+            />
             <Notes value={notes} handle={selectedFeedback} />
             <Flex
-              justify="flex-end"
-              direction={["column-reverse", "column-reverse", "row"]}
+              justify="space-between"
+              direction={["column-reverse", "column-reverse", "column", "row"]}
               gap={2}
             >
+              <OpenInStudio handle={selectedFeedback} />
               <Actions handle={selectedFeedback} />
             </Flex>
             {/* Sentiment, Notes, Assignee, Actions */}

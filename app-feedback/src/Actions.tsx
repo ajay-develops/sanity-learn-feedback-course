@@ -43,6 +43,7 @@ export function Actions({ handle }: ActionsProps) {
         mode="ghost"
         tone="positive"
         text="Approve"
+        width="fill"
         onClick={handleApprove}
       />
     </Flex>
